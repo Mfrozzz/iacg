@@ -1,0 +1,816 @@
+
+/* ------------  CONFIG GERAL  ------------*/
+
+p {
+  line-height: 2rem;
+  font-size: 110%;
+  text-align: justify;
+}
+
+textarea{
+  height: 50%; 
+  width: 100%;
+}
+
+.pagination li a {
+    font-size: 1rem;
+}
+
+li{
+    font-size:110%; 
+    text-align: justify;
+}
+
+h6, h5, h4, iframe{
+  font-family: 'Aldrich', sans-serif;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+body{
+  font-family: 'Tenor Sans', sans-serif;
+  color: rgb(0, 0, 0);
+}
+
+blockquote{
+  margin-bottom: 45px;
+  text-align: justify;
+}
+
+blockquote {
+  border-left: 5px solid #1d3557;
+}
+.blockquote-cor2 {
+  border-left: 5px solid #333;
+}
+
+footer{
+  margin-top: -15px;
+
+}
+
+ol li {
+  padding-bottom: 5px;
+}
+
+.sombraCurso{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding-bottom: 0 !important;
+}
+
+/* --------------- TABLE ----------------*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+th,
+td {
+  padding: 15px;
+  background-color: white;
+  color: black;
+  font-family: 'Aldrich', sans-serif;
+  font-size: 130%;
+}
+th {
+  text-align: left;
+  
+}
+thead th {
+  background-color: #cfd8dc;
+}
+tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+tbody td {
+  position: relative;
+}
+tbody td:hover:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -9999px;
+  bottom: -9999px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+}
+
+/* ------------  FONT FAMILY ESPECIFICAS  ------------*/
+
+.font-inovacao{
+  font-family: 'Aldrich', sans-serif;
+}
+
+/* ------------  Z INDEX  ------------*/
+
+.parallax-container {
+  height: 300px;
+  z-index: -1;
+}
+
+#menu{
+  z-index: +1;
+}
+/* ------------  TAMANHO FONTE ESPECIFICO  ------------*/
+
+.topicoNumerico{
+  font-size: 1.25rem;
+}
+
+.imgreferencia{
+  font-size: 80%;
+}
+
+.textoLink{
+  font-size: 90%;
+}
+
+.textoDestaque{
+  font-size: 130%;
+}
+
+/* ------------  #WIDTH AND MARGIN------------*/
+
+.menor{
+  width: 50%;
+  margin-left: 25%;
+}
+
+
+.tabelatamenho{
+  width: 25%;
+  margin-left: 35%;
+}
+
+.contato{
+  width: 45%;
+  margin-bottom: 15px;
+}
+
+
+/* ------------  ESPAÃ‡AMENTOS  e ALINHAMENTOS------------*/
+
+.blocoPaginacao{
+  text-align: right;
+}
+
+.tabela2{
+  text-align: center;
+}
+
+.paddingTop{
+  padding: 15px;
+}
+
+.topicoNumerico>ol>li{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.espacoLateral{
+  padding-left: 15px;
+  padding-right:15px;
+}
+
+.espacoLateral2{
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.tituloCurso{
+  padding-left: 30px;
+  font-family: 'Aldrich', sans-serif;
+}
+
+.row{
+  margin-top: 40px;
+}
+
+
+.boxavaliacao{
+  padding: 30px;
+}
+
+.boxdecreto{
+  padding: 15px;
+}
+
+
+.row img{
+  margin-top: 15px;
+  padding-bottom: 15px;
+}
+
+
+.TitleTopicos{
+  padding-left: 35px;
+}
+
+.CardTopicos{
+  margin-bottom: 40px;
+}
+
+.topicos{
+  padding-left: 70px;
+}
+
+.btnproximo{
+  text-align: center;
+}
+
+.recuo{
+  padding-right: 60px;
+}
+
+.recuo2{
+  padding-left: 60px;
+}
+
+.recuo3{
+  padding-top: 20px;
+}
+
+.recuo4{
+  padding-left: 120px;
+}
+
+.recuo5{
+  padding-left: 700px;
+  line-height: 0px;
+}
+
+.recuo6{
+  padding-top: 30px;
+}
+
+.recuo7{
+  padding: 50px;
+}
+
+.recuo8{
+  padding-left: 500px;
+  line-height: 0px;
+}
+
+.recuo9{
+  padding-left: 400px;
+  line-height: 0px;
+}
+
+.recuo10{
+  padding-left: 35px;
+}
+
+#btn-anexos > a > div > span{
+  position: fixed;
+  bottom: 43px;
+  right: 105px;
+  line-height: 15px;
+  font-family: 'Tenor Sans', sans-serif;
+  font-weight: bold;
+}
+
+#btn-anexos>a>div{
+  border: 3px solid #2e7d32;
+  right: 62px;
+  border-radius: 15px;
+  position: fixed;
+  height: 30px;
+  width: 160px;
+  background-color: #f1f1f1;
+  bottom: 36px;
+  z-index: -1;
+}
+
+#btn-anexos>a{
+  z-index: initial;
+}
+
+/* ------------  ESTILO DE CORES E ELEMENTOS ------------*/
+
+.LinkSumario>a{
+  color:black;
+}
+
+.subbox{
+background-color: #ceeeff;
+}
+
+.subbox>a{
+  color: #2f406b;
+}
+
+
+.corLink{
+  color: #080808;
+}
+
+.corRef{
+  color: #2279be;
+}
+
+.destaque{
+  border: 3px solid #9AD6F5 ;
+  background: -moz-linear-gradient(left, rgba(154,214,245,0.65) 0%, rgba(154,214,245,0.65) 1%, rgba(154,214,245,0) 25%, rgba(154,214,245,0) 75%, rgba(154,214,245,0.65) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(154,214,245,0.65) 0%,rgba(154,214,245,0.65) 1%,rgba(154,214,245,0) 25%,rgba(154,214,245,0) 75%,rgba(154,214,245,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(154,214,245,0.65) 0%,rgba(154,214,245,0.65) 1%,rgba(154,214,245,0) 25%,rgba(154,214,245,0) 75%,rgba(154,214,245,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a69ad6f5', endColorstr='#a69ad6f5',GradientType=1 ); /* IE6-9 */
+  text-align: justify;
+   padding: 50px;
+}
+
+/* GAPI */
+.list-GPI{
+  width:510px;
+  margin:0 15px;
+  color: #FFF !important;
+}
+
+.list-GPI ol {
+  list-style-type: none;
+  list-style-type: decimal; /*IE 7- hack*/
+  margin: 0;
+  margin-left: 1em;
+  padding: 0;
+  counter-reset: li-counter;
+  color: #FFF !important;
+}
+
+.list-GPI ol li{
+  position: relative;
+  margin-bottom: 1.5em;
+  padding: 0.5em;
+  background-color: #1d3557;
+  padding-left: 58px;
+  color: #FFF !important;
+}
+  
+.list-GPI a{
+  text-decoration:none;
+  color: #fff !important;
+  font-size:15px;
+  font-family: 'Tenor Sans', sans-serif;
+}
+  
+.list-GPI li:hover{
+  box-shadow:inset -1em 0 #9AD6F5;
+  -webkit-transition: box-shadow 0.5s; /* For Safari 3.1 to 6.0 */
+  transition: box-shadow 0.5s;
+}
+  
+.list-GPI ol li:before {
+  position: absolute;
+  top: -0.3em;
+  left: -0.5em;
+  width: 1.8em;
+  height: 1.2em;
+  font-size: 2em;
+  line-height: 1.2;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  background-color: #2a7499;
+  overflow: hidden;
+  content: counter(li-counter);
+  counter-increment: li-counter;
+}
+
+.hr-gpi { 
+    border : 0;
+    height: 1px; 
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); 
+}
+
+.tit-gpi-h5{
+    color: #1d3557 !important;
+    text-transform: capitalize !important;
+    font-weight: bold;
+    font-size: 24px !important;
+}
+
+.tit-gpi-h5 a:hover{ 
+    text-decoration: none !important;
+    color: rgb(79, 98, 179);
+}
+
+.unidade{
+  padding: 10px !important;
+}
+
+.card-unidade:hover {
+  transform: scale(1.05);
+  transition: all .6s ease;
+}
+
+.card-unidade {
+  padding: 8px;
+  background-color: #fff;
+  box-shadow: 1px 1px 3px 1px #ccc;
+}
+
+.card-unidade:hover {
+  transform: scale(1.05);
+  transition: all .6s ease;
+}
+
+.section-card{
+  padding: 40px 20px;;
+}
+
+.img-body>a>img {
+  border-radius: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+.img-thumbnail {
+  padding: .25rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  max-width: 100%;
+  height: auto;
+}
+
+.texto-check{
+  font-family: 'Tenor Sans', sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 130%;
+  font-family: 'Aldrich', sans-serif;
+}
+
+.credito{
+  font-size: 100%;
+}
+
+.video-sociedade{
+  width: 100%;
+  height: 50%;
+}
+
+
+.bordaFundo  /* menu topo  */
+{
+  border-bottom: 5px solid #1d3557;
+  position: fixed;
+  width: 100%;
+  height:60px;
+  background-color: rgb(0, 0, 0);
+}
+
+.mudaCor{
+  border-bottom: 4px solid #f58634 ;
+  position: fixed;
+  width: 100%;
+  height:60px;
+  background-color: #005744   ;
+}
+
+.citacao{
+ /* border: 3px solid #1d3557 ;*/
+  margin-left: 25%;
+}
+
+.citacao2{
+  border: 3px dashed #1d3557 ;
+  padding: 35px;
+  font-family: 'Aldrich', sans-serif;
+  font-size: 150%;
+}
+
+.citacao3{
+  border: 3px solid #1d3557;
+  background: linear-gradient(to right, rgba(154,214,245,0.65) 0%,rgba(154,214,245,0.65) 1%,rgba(154,214,245,0) 25%,rgba(154,214,245,0) 75%,rgba(154,214,245,0.65) 100%);
+  text-align: justify;
+  padding: 50px;
+}
+
+.citacao4{
+  margin-left: 75%;
+}
+
+.citacao5{
+  width: 50%;
+  margin-left: 25%;
+}
+
+.refletir{
+  border-top:5px solid #005744 ;
+  border-bottom:5px solid #f58634 ;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  width: 75%;
+  margin-left: 12.5%;
+}
+
+.bordaCard{
+  padding: 15px;
+  border: 2px solid gray ;
+}
+
+.bordaCard>li{
+  padding: 10px;
+}
+
+.bordazulescuro{
+  border: 2px solid #2279be ;
+}
+
+.textAzulescuro{
+  color: #1566a7;
+}
+
+.bordVerde{
+  border: 2px solid #41bdbd ;
+}
+
+.textVerde{
+  color: #0e5323;
+}
+
+.bordAzulClaro{
+  border: 2px solid #9ad7f6 ;
+}
+
+.textAzulClaro{
+  color: #61b5e1;
+}
+
+.bordCinza{
+  border: 2px solid #b6b6b6 ;
+}
+
+.textCinza{
+  color: #727377;
+}
+
+.textVerde{
+  color:#025231;
+}
+
+.no-margin {
+  margin: 0px;
+}
+
+
+.bannerCelu{
+  padding-top: 60px;
+}
+
+
+.bordazul{
+  border: 5px dashed #1d3557 ;
+}
+
+.textAzul{
+  color: #0a0de9;
+}
+
+
+.paddCart{
+  margin-bottom: 200px;
+}
+
+.imgSemEsp>img{
+  margin-top: 0;
+  padding: 0;
+}
+
+.bordaCard2{
+  border-right:2px solid gray ;
+  border-left:2px solid gray ;
+  border-top:2px solid gray ;
+}
+
+.mudaCor{
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#515151+1,444444+35,232323+66,161616+100 */
+background: #515151; /* Old browsers */
+background: -moz-linear-gradient(top, #515151 1%, #444444 35%, #232323 66%, #161616 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #515151 1%,#444444 35%,#232323 66%,#161616 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #515151 1%,#444444 35%,#232323 66%,#161616 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#515151', endColorstr='#161616',GradientType=0 ); /* IE6-9 */
+}
+
+.CorTemaFundo{
+  background-color: #f58634 ;
+}
+
+.CorTemaFooter{
+  background: hsla(215, 44%, 54%, 1);
+  background: linear-gradient(270deg, hsla(215, 44%, 54%, 0.9) 0%, hsla(0, 0%, 100%, 1) 100%);
+  background: -moz-linear-gradient(270deg, hsla(215, 44%, 54%, 0.9) 0%, hsla(0, 0%, 100%, 1) 100%);
+  background: -webkit-linear-gradient(270deg, hsla(215, 44%, 54%, 0.9) 0%, hsla(0, 0%, 100%, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#5782BE", endColorstr="#FFFFFF", GradientType=1 );
+  border-radius:  0px 0px 0px 200px;
+}
+
+.CorTemaBtn{
+  border: 1px solid #1d3557;
+  background-color: #1d3557;
+  border-radius:  15px 0px 15px 0px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.btnverde{
+  background-color: #005744 ;
+}
+
+.fundoGrafite{
+  background-color: #727376;
+}
+
+.fundoGrafiteClaro{
+background-color: #d0cdd4;
+
+}
+
+.CorTemaBtnHover2 a:hover{
+  background-color: #457b9d;
+  color: white;
+}
+
+.corTemaTexto{
+  color: #023047;
+}
+
+.boxRecuado{
+    background-color: #1d3557  /*#FFB319*/;
+    color: white;
+}
+.boxRecuado2{
+    background-color: #457b9d  /*#FFB319*/;
+    color: white;
+    box-shadow: 0px 0px 1em #666;
+    -webkit-box-shadow: 0px 0px 1em #666;
+    -moz-box-shadow: 0px 0px 1em #666;
+}
+
+.corTemaTexto2{
+  color: #333333;
+}
+
+.corDestaqueTexto{
+    color: #f58634      ;
+}
+
+.ListaMaterias ul li a:hover{
+  color: #005744    ;
+}
+
+.CorTemaBtnHover a:hover{
+    background-color: #333;
+    color: white;
+    border: 1px solid #FFCC00;
+}
+
+.desativado>a:hover{
+  color: gray;
+}
+
+.ativo>a:focus, .ativo>a{
+  background-color:  #005744   ;
+
+}
+
+.destaque{
+  border: 3px solid #1d3557;
+  background: hsla(215, 44%, 54%, 1);
+  background: linear-gradient(270deg, hsla(215, 44%, 54%, 0.9) 0%, hsla(0, 0%, 100%, 1) 100%);
+  background: -moz-linear-gradient(270deg, hsla(215, 44%, 54%, 0.9) 0%, hsla(0, 0%, 100%, 1) 100%);
+  background: -webkit-linear-gradient(270deg, hsla(215, 44%, 54%, 0.9) 0%, hsla(0, 0%, 100%, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#5782BE", endColorstr="#FFFFFF", GradientType=1 );
+  text-align: justify;
+  padding: 50px;
+}
+
+/* ------------  MEDIA QUERIES  ------------*/
+
+
+@media only screen and (max-width : 992px) {
+  header, main, footer {
+    padding-left: 0;
+  }
+
+  .bordaFundo {
+    position: fixed;
+    width: 100%;
+    
+  }
+
+  .blocoPaginacao {
+    padding-top: 40px;
+    text-align: center;
+  }
+
+  .mudaCor {
+    position: fixed;
+    width: 100%;
+    height: 120px;
+  }
+
+  .menor {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .metade {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .apresentacao {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 90%;
+    margin-left: 5%;
+    text-align: center;
+  }
+
+  .ListaMaterias {
+    z-index: -1;
+  }
+
+  .tabelatamenho {
+    width: 50%;
+    margin-left: 25%;
+  }
+
+  span.espacoLateral2>a {
+    margin-top: 10px;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .parallax-container {
+    top: 50px;
+    height: 200px;
+  }
+
+  .blocoPaginacao, .tituloCurso {
+    text-align: center;
+  }
+}
+
+/*muda cor do link*/
+link_text a {
+  text-decoration: underline;
+  color: #1e06fa;
+}
+
+link_text a:hover {
+  text-decoration: none;
+}
+
+/*formulario*/
+
+.login{
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  max-width: 300px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  background-color: #17009c;
+  color: #fff;
+  padding: 10px 3px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #17009c;
+}}
