@@ -266,7 +266,7 @@ tbody td:hover:before {
 #btn-anexos > a > div > span{
   position: fixed;
   bottom: 43px;
-  right: 105px;
+  left: 115px;
   line-height: 15px;
   font-family: 'Tenor Sans', sans-serif;
   font-weight: bold;
@@ -274,7 +274,7 @@ tbody td:hover:before {
 
 #btn-anexos>a>div{
   border: 3px solid #2e7d32;
-  right: 62px;
+  left: 62px;
   border-radius: 15px;
   position: fixed;
   height: 30px;
