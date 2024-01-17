@@ -263,6 +263,8 @@ tbody td:hover:before {
   padding-left: 35px;
 }
 
+/* ALINHAMENTO FIXED FLOAT BTN E MODAL */
+
 #btn-anexos > a > div > span{
   position: fixed;
   bottom: 43px;
@@ -286,6 +288,15 @@ tbody td:hover:before {
 
 #btn-anexos>a{
   z-index: initial;
+}
+
+/* BROWSER-DEFAULT */
+
+.browser-default{
+  border: 1px solid #1d3557;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  height: 32.4px;
 }
 
 /* ------------  ESTILO DE CORES E ELEMENTOS ------------*/
