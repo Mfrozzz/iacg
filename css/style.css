@@ -299,6 +299,10 @@ tbody td:hover:before {
   height: 32.4px;
 }
 
+select option a{
+  text-decoration: none;
+}
+
 /* ------------  ESTILO DE CORES E ELEMENTOS ------------*/
 
 .LinkSumario>a{
