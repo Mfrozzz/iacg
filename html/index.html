@@ -516,8 +516,8 @@
         </p>
         <!-- lista de arquivos -->
         <div>
-          <ul>
-            <li>
+          <ul id="lista">
+            <!-- <li>
               <div class="row li-row-test">
                 <div class="col s11">aaaaa</div>
                 <div class="col s1" style="text-align: end;"><a href=""><i class="material-icons">delete_forever</i></a>
@@ -558,20 +558,17 @@
                 <div class="col s1" style="text-align: end;"><a href=""><i class="material-icons">delete_forever</i></a>
                 </div>
               </div>
-            </li>
+            </li> -->
           </ul>
-          <!-- <ul>
-            <li>1</li><div class="divider"></div> -> <a><i class="material-icons">clear/close/delete_forever</i></a>
-          </ul> -->
         </div>
         <!-- input de arquivos -->
         <div class="file-field input-field">
           <div class="btn green darken-3">
             <span>Inserir</span>
-            <input type="file" multiple />
+            <input id="input-arquivo" type="file"/>
           </div>
           <div class="file-path-wrapper">
-            <input class="file-path validate" type="text" placeholder="Upload de arquivos" />
+            <input class="file-path validate botao-arquivo" type="text" placeholder="Upload de arquivos" />
           </div>
         </div>
       </div>
