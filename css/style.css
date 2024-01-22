@@ -315,6 +315,7 @@ tbody td:hover:before {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
+  /* background: hsla(215, 44%, 54%, 0.3); */
 }
 
 .questBtns{

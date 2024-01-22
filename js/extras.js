@@ -25,16 +25,9 @@ input.addEventListener("change", function(){
       nome = input.files[0].name;
       arquivos.push(nome);
       for(var i = 0;i<arquivos.length;i++){
-
-        // let item = document.createElement('li');
-        // item.setAttribute("id","list");
-        // lista.appendChild(item);
-        // item.appendChild(document.createTextNode(arquivos[i]));
-
         let item = document.createElement('li');
         item.setAttribute("id","list");
         lista.appendChild(item);
-        // item.appendChild(document.createTextNode(arquivos[i]));
 
         let container = document.createElement("div");
         container.setAttribute("id","box");
@@ -87,3 +80,31 @@ input.addEventListener("change", function(){
     clone_arquivos = arquivos;
     clone_lista = lista;
 });
+
+// var tab_content = document.getElementById("teste");
+// var indicador = document.getElementsByClassName("indicator");
+// var ativar = document.getElementsByClassName("active");
+// function showAndDisplay(){
+//     tab_content.style.display = "block";
+//     for(let i =0;i<indicador.length;i++){
+//       indicador[i].style.display = "block";
+//     }
+//     for(let i =0;i<ativar.length;i++){
+//       ativar[i].style.display = "block";
+//     }
+// }
+
+var numeroQuestao = document.getElementsByClassName("itemQuestao");
+// console.log(numeroQuestao[0].innerText);
+
+function navQuest1(e){
+  document.getElementById("textoQuest").innerHTML = e;
+}
+
+function navQuest2(e){
+  document.getElementById("textoQuest2").innerHTML = e;
+}
+
+function navQuest3(e){
+  document.getElementById("textoQuest3").innerHTML = e;
+}
