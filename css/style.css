@@ -363,8 +363,16 @@ tbody td:hover:before {
 }
 
 #link{
-  color: red;
+  margin-right: 1.5%;
+  color: #801515;
   cursor: pointer;
+  transition: .2s;
+  animation: ease-in-out;
+}
+
+#link:hover{
+  /* color: #b10b0b; */
+  transform: scale(1.2);
 }
 
 #box{
@@ -373,9 +381,26 @@ tbody td:hover:before {
   align-items: center;
 }
 
+#box p{
+  margin-left: 1.5%;
+}
+
 .bot-allign{
   position: fixed;
   left: 1.7%;
+  width: 35%;
+}
+
+@media screen and (max-width:1024px){
+  .bot-allign{
+    width: 30%;
+  }
+}
+
+@media screen and (max-width:768px){
+  .bot-allign{
+    width: 25%;
+  }
 }
 
 .correct-card-padding{
@@ -399,15 +424,6 @@ tbody td:hover:before {
 }
 
 /* SOBRESCRITO */
-
-.modal.bottom-sheet{
-    top: 0;
-    margin: 0;
-    /* width: 100%; */
-    max-height: none;
-    border-radius: 8px;
-    will-change: bottom, opacity;
-}
 
 .tabs .indicator{
   position: absolute;
@@ -441,21 +457,11 @@ tbody td:hover:before {
 
 .fixed-action-btn {
   position: fixed;
-  /* right: 23px; */
   left: 23px;
   bottom: 23px;
   padding-top: 15px;
   margin-bottom: 0;
   z-index: 997;
-}
-
-.modal.bottom-sheet {
-  top: 0;
-  margin: 0;
-  border-radius: 0;
-  max-height: none;
-  border-radius: 8px;
-  will-change: bottom, opacity;
 }
 
 .tabs .tab.disabled a,
@@ -470,6 +476,115 @@ tbody td:hover:before {
 .tabs .tab a:hover, .tabs .tab a.active {
   background-color: transparent;
   color: #263968;
+}
+
+.tabs .tab a:hover,
+.tabs .tab a.active {
+  background-color: transparent;
+  color: #263968;
+}
+
+.modal-overlay {
+  position: fixed;
+  z-index: 999;
+  top: -25%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 125%;
+  width: 100%;
+  background: #000;
+  display: none;
+  will-change: opacity;
+  opacity: 0.2 !important;
+}
+
+.modal-footer {
+  position: absolute;
+  bottom: 0;
+}
+
+.modal.bottom-sheet {
+  /* top: auto; */
+  top: 0;
+  /* bottom: -100%; */
+  margin: 0;
+  width: 55%;
+  /* max-height: 45%; */
+  /* max-height: 50%; */
+  max-height: none;
+  /* border-radius: 0; */
+  border-radius: 8px;
+  will-change: bottom, opacity;
+}
+
+.modal .modal-content {
+  padding: 24px;
+  padding-bottom: 48px;
+}
+
+input:not([type]):focus:not([readonly]),
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=url]:not(.browser-default):focus:not([readonly]),
+input[type=time]:not(.browser-default):focus:not([readonly]),
+input[type=date]:not(.browser-default):focus:not([readonly]),
+input[type=datetime]:not(.browser-default):focus:not([readonly]),
+input[type=datetime-local]:not(.browser-default):focus:not([readonly]),
+input[type=tel]:not(.browser-default):focus:not([readonly]),
+input[type=number]:not(.browser-default):focus:not([readonly]),
+input[type=search]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #218240;
+  -webkit-box-shadow: 0 1px 0 0 #218240;
+  box-shadow: 0 1px 0 0 #218240;
+}
+
+input:not([type]):focus:not([readonly])+label,
+input[type=text]:not(.browser-default):focus:not([readonly])+label,
+input[type=password]:not(.browser-default):focus:not([readonly])+label,
+input[type=email]:not(.browser-default):focus:not([readonly])+label,
+input[type=url]:not(.browser-default):focus:not([readonly])+label,
+input[type=time]:not(.browser-default):focus:not([readonly])+label,
+input[type=date]:not(.browser-default):focus:not([readonly])+label,
+input[type=datetime]:not(.browser-default):focus:not([readonly])+label,
+input[type=datetime-local]:not(.browser-default):focus:not([readonly])+label,
+input[type=tel]:not(.browser-default):focus:not([readonly])+label,
+input[type=number]:not(.browser-default):focus:not([readonly])+label,
+input[type=search]:not(.browser-default):focus:not([readonly])+label,
+textarea.materialize-textarea:focus:not([readonly])+label {
+  color: #218240;
+}
+
+[type="radio"]:checked+span:after,
+[type="radio"].with-gap:checked+span:before,
+[type="radio"].with-gap:checked+span:after {
+  border: 2px solid #218240;
+}
+
+[type="radio"]:checked+span:after,
+[type="radio"].with-gap:checked+span:after {
+  background-color: #218240;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: #fafafa;
+  padding: 0;
+  max-height: 70%;
+  width: 55%;
+  margin: auto;
+  overflow-y: auto;
+  border-radius: 2px;
+  will-change: top, opacity;
+}
+
+.material-tooltip{
+  background-color: #000;
 }
 
 /* ------------  ESTILO DE CORES E ELEMENTOS ------------*/

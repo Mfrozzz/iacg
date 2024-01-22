@@ -87,4 +87,3 @@ input.addEventListener("change", function(){
     clone_arquivos = arquivos;
     clone_lista = lista;
 });
-
