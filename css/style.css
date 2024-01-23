@@ -61,6 +61,10 @@ ol li {
   padding-bottom: 0 !important;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* --------------- TABLE ----------------*/
 table {
   width: 100%;
@@ -310,15 +314,22 @@ tbody td:hover:before {
 }
 
 .parentQuestoes {
-  margin-top: 1%;
+  /* margin-top: 1%; */
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-  /* background: hsla(215, 44%, 54%, 0.3); */
+  background: hsla(215, 44%, 54%, 1);
+  background: linear-gradient(270deg, hsla(215, 44%, 54%, 0.9) 0%, hsla(0, 0%, 100%, 1) 100%);
+  background: -moz-linear-gradient(270deg, hsla(215, 44%, 54%, 0.9) 0%, hsla(0, 0%, 100%, 1) 100%);
+  background: -webkit-linear-gradient(270deg, hsla(215, 44%, 54%, 0.5) 0%, hsla(0, 0%, 100%, 0.5) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#5782BE", endColorstr="#FFFFFF", GradientType=1);
+  padding: 1%;
+  padding-bottom: 1.15%;
+  border-radius: 5px;
 }
 
-.questBtns{
+.questBtns {
   border: 1px solid #1d3557;
   background-color: #1d3557;
   border-radius: 15px 0px 15px 0px;
@@ -326,9 +337,13 @@ tbody td:hover:before {
   font-weight: 700;
 }
 
-.questBtns:hover{
-  background-color: rgba(29,53,87, 0.8);
+.questBtns:hover {
+  background-color: rgba(29, 53, 87, 0.9);
   color: white;
+}
+
+#tab-content-visible, .indicator{
+  display: none;
 }
 
 /* PRANCHETA ADICIONAIS */
@@ -345,25 +360,25 @@ tbody td:hover:before {
   flex-direction: row;
 }
 
-.footer-modal{
+.footer-modal {
   display: flex;
   flex-direction: row-reverse;
 }
 
-.li-row-test{
+.li-row-test {
   /* margin-top: 1.5%; */
   background-color: red;
 }
 
-.li-row-test i{
+.li-row-test i {
   transition: 0.3s;
 }
 
-.li-row-test i:hover{
+.li-row-test i:hover {
   color: red;
 }
 
-#link{
+#link {
   margin-right: 1.5%;
   color: #801515;
   cursor: pointer;
@@ -371,62 +386,64 @@ tbody td:hover:before {
   animation: ease-in-out;
 }
 
-#link:hover{
+#link:hover {
   /* color: #b10b0b; */
   transform: scale(1.2);
 }
 
-#box{
+#box {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-#box p{
+#box p {
   margin-left: 1.5%;
 }
 
-.bot-allign{
+.bot-allign {
   position: fixed;
   left: 1.7%;
   width: 35%;
 }
 
-@media screen and (max-width:1024px){
-  .bot-allign{
+@media screen and (max-width:1024px) {
+  .bot-allign {
     width: 30%;
   }
 }
 
-@media screen and (max-width:768px){
-  .bot-allign{
+@media screen and (max-width:768px) {
+  .bot-allign {
     width: 25%;
   }
 }
 
-.correct-card-padding{
+.correct-card-padding {
   padding: 3px;
   margin-bottom: 0.25rem;
   margin-top: 0.25rem;
   background-color: #f1f1f1;
 }
 
-.teste-das-tabs{
+.tab-style-background {
   background: hsla(215, 44%, 54%, 1);
   background: linear-gradient(265deg, hsla(215, 44%, 54%, 0.9) 0%, hsla(0, 0%, 100%, 1) 100%);
   background: -moz-linear-gradient(265deg, hsla(215, 44%, 54%, 0.9) 0%, hsla(0, 0%, 100%, 1) 100%);
   background: -webkit-linear-gradient(265deg, hsla(215, 44%, 54%, 0.5) 0%, hsla(0, 0%, 100%, 0.5) 100%);
   filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#5782BE", endColorstr="#FFFFFF", GradientType=1);
-  /* background: hsla(215, 44%, 54%, 1);
-  background: linear-gradient(270deg, hsla(215, 44%, 54%, 0.9) 0%, hsla(0, 0%, 100%, 1) 100%);
-  background: -moz-linear-gradient(270deg, hsla(215, 44%, 54%, 0.9) 0%, hsla(0, 0%, 100%, 1) 100%);
-  background: -webkit-linear-gradient(270deg, hsla(215, 44%, 54%, 0.9) 0%, hsla(0, 0%, 100%, 1) 100%);
-  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#5782BE", endColorstr="#FFFFFF", GradientType=1); */
+}
+
+.mid-bot_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* SOBRESCRITO */
 
-.tabs .indicator{
+.tabs .indicator {
   position: absolute;
   bottom: 0;
   height: 5px;
@@ -474,7 +491,8 @@ tbody td:hover:before {
   will-change: left, right;
 }
 
-.tabs .tab a:hover, .tabs .tab a.active {
+.tabs .tab a:hover,
+.tabs .tab a.active {
   background-color: transparent;
   color: #263968;
 }
@@ -584,7 +602,7 @@ textarea.materialize-textarea:focus:not([readonly])+label {
   will-change: top, opacity;
 }
 
-.material-tooltip{
+.material-tooltip {
   background-color: #000;
 }
 

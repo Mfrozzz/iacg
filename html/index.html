@@ -69,7 +69,7 @@
   </div>
 
   <!-- Banner -->
-  <div class="col">
+  <div class="col" id="page_top">
     <div class="bannerCelu">
       <img src="../image/banner.jpg" width="100%" alt="Unsplashed background img 1" />
     </div>
@@ -77,47 +77,94 @@
 
   <div class="container">
     <div class="card-panel CardTopicos" style="border-radius: 5px">
-      <ul class="tabs tabs-fixed-width tab-demo z-depth-1" title="Clique para acessar as questões." style="border-radius: 5px" onclick="showAndDisplay()">
-        <li class="tab teste-das-tabs">
+      <!-- NAVEGAÇÃO ENTRE AS QUESTÕES -->
+      <ul class="tabs tabs-fixed-width tab-demo z-depth-1" title="Navegue entre as Questões." style="border-radius: 5px"
+        onclick="showAndDisplay()" id="tabs-parent-list">
+        <li class="tab tab-style-background">
           <a href="#test1">1 - Organização Didático-Pedagógica</a>
         </li>
-        <li class="tab teste-das-tabs">
+        <li class="tab tab-style-background">
           <a href="#test2">2 - Corpo Docente e Tutorial</a>
         </li>
-        <li class="tab teste-das-tabs"><a href="#test3">3 - Infraestrutura</a></li>
+        <li class="tab tab-style-background">
+          <a href="#test3">3 - Infraestrutura</a>
+        </li>
       </ul>
-      <div id="test1" class="col s12">
-        <form id="teste" action="#">
-          <!-- <div class="container"> -->
-          <div class="parentQuestoes">
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest1(numeroQuestao[0].innerText)" href="#">1.1</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest1(numeroQuestao[1].innerText)" href="#">1.2</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest1(numeroQuestao[2].innerText)" href="#">1.3</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest1(numeroQuestao[3].innerText)" href="#">1.4</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest1(numeroQuestao[4].innerText)" href="#">1.5</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest1(numeroQuestao[5].innerText)" href="#">1.6</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest1(numeroQuestao[6].innerText)" href="#">1.7</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest1(numeroQuestao[7].innerText)" href="#">1.8</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest1(numeroQuestao[8].innerText)" href="#">1.9</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest1(numeroQuestao[9].innerText)" href="#">1.10</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest1(numeroQuestao[10].innerText)" href="#">1.11</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest1(numeroQuestao[11].innerText)" href="#">1.12</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest1(numeroQuestao[12].innerText)" href="#">1.13</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest1(numeroQuestao[13].innerText)" href="#">1.14</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest1(numeroQuestao[14].innerText)" href="#">1.15</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest1(numeroQuestao[15].innerText)" href="#">1.16</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest1(numeroQuestao[16].innerText)" href="#">1.17</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest1(numeroQuestao[17].innerText)" href="#">1.18</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest1(numeroQuestao[18].innerText)" href="#">1.19</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest1(numeroQuestao[19].innerText)" href="#">1.20</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest1(numeroQuestao[20].innerText)" href="#">1.21</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest1(numeroQuestao[21].innerText)" href="#">1.22</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest1(numeroQuestao[22].innerText)" href="#">1.23</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest1(numeroQuestao[23].innerText)" href="#">1.24</a>
+      <section>
+        <div id="test1" class="col s12">
+          <div class="parentQuestoes" id="tab-content-visible">
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.1</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.2</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.3</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.4</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.5</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.6</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.7</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.8</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.9</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.10</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.11</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.12</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.13</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.14</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.15</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.16</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.17</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.18</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.19</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.20</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.21</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.22</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.23</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.24</a>
           </div>
-          <!-- <div class="card-panel CardTopicos" style="border-radius: 5px;"> -->
+        </div>
+        <div id="test2" class="col s12">
+          <div class="parentQuestoes" id="tab-content-visible">
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">2.1</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">2.2</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">2.3</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">2.4</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">2.5</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">2.6</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">2.7</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">2.8</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">2.9</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">2.10</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">2.11</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">2.12</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">2.13</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">2.14</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">2.15</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">2.16</a>
+          </div>
+        </div>
+        <div id="test3" class="col s12">
+          <div class="parentQuestoes" id="tab-content-visible">
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">3.1</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">3.2</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">3.3</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">3.4</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">3.5</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">3.6</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">3.7</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">3.8</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">3.9</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">3.10</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">3.11</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">3.12</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">3.13</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">3.14</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">3.15</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">3.16</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">3.17</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">3.18</a>
+          </div>
+        </div>
+        <!-- FORMULÁRIO DA QUESTÃO -->
+        <form id="questionario" class="questionario" action="#">
           <p class="black-text">
-            <strong style="color: #218240" id="textoQuest">1.1</strong>
+            <strong style="color: #218240" id="textoQuest3">num.num</strong>
             {{questao.enunciado}}
             <strong style="color: #218240; font-weight: bolder">*</strong>
           </p>
@@ -211,290 +258,26 @@
           <div class="row">
             <div class="col s12 m6 l3">
               <span class="CorTemaBtnHover2" style="display: block; text-align: start">
-                <a class="btn btn-small waves-light CorTemaBtn" href="" title="Questão Anterior."><i class="material-icons">chevron_left</i></a>
+                <a class="btn btn-small waves-light CorTemaBtn" href="" title="Questão Anterior."><i
+                    class="material-icons">chevron_left</i></a>
               </span>
             </div>
             <div class="col s12 m6 l6">
-              <p></p>
+              <span class="CorTemaBtnHover2" style="display: block; text-align: center">
+                <a class="btn btn-small waves-light CorTemaBtn mid-bot_btn" href="#page_top"
+                  title="Ir para o topo da página.">Voltar Para o Topo &emsp;<i
+                    class="material-icons">arrow_upward</i></a>
+              </span>
             </div>
             <div class="col s12 m6 l3">
               <span class="CorTemaBtnHover2" style="display: block; text-align: end">
-                <a class="btn btn-small waves-light CorTemaBtn" href="" title="Próxima Questão."><i class="material-icons">chevron_right</i></a>
+                <a class="btn btn-small waves-light CorTemaBtn" href="#" title="Próxima Questão."><i
+                    class="material-icons">chevron_right</i></a>
               </span>
             </div>
           </div>
-          <!-- </div> -->
-          <!-- </div> -->
         </form>
-      </div>
-      <div id="test2" class="col s12">
-        <form action="#">
-          <!-- <div class="container"> -->
-          <div class="parentQuestoes">
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest2(numeroQuestao[24].innerText)" href="#">2.1</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest2(numeroQuestao[25].innerText)" href="#">2.2</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest2(numeroQuestao[26].innerText)" href="#">2.3</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest2(numeroQuestao[27].innerText)" href="#">2.4</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest2(numeroQuestao[28].innerText)" href="#">2.5</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest2(numeroQuestao[29].innerText)" href="#">2.6</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest2(numeroQuestao[30].innerText)" href="#">2.7</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest2(numeroQuestao[31].innerText)" href="#">2.8</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest2(numeroQuestao[32].innerText)" href="#">2.9</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest2(numeroQuestao[33].innerText)" href="#">2.10</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest2(numeroQuestao[34].innerText)" href="#">2.11</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest2(numeroQuestao[35].innerText)" href="#">2.12</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest2(numeroQuestao[36].innerText)" href="#">2.13</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest2(numeroQuestao[37].innerText)" href="#">2.14</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest2(numeroQuestao[38].innerText)" href="#">2.15</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest2(numeroQuestao[39].innerText)" href="#">2.16</a>
-          </div>
-          <!-- <div class="card-panel CardTopicos" style="border-radius: 5px;"> -->
-          <p class="black-text">
-            <strong style="color: #218240" id="textoQuest2">2.1</strong>
-            {{questao.enunciado}}
-            <strong style="color: #218240; font-weight: bolder">*</strong>
-          </p>
-          <div class="s12 m4 l8">
-            <div class="recuo10">
-              <div>
-                <p>
-                  <label>
-                    <input class="with-gap" name="group1" type="radio" />
-                    <span class="black-text">0. Não se aplica.</span>
-                  </label>
-                </p>
-              </div>
-              <div>
-                <p>
-                  <label>
-                    <input class="with-gap" name="group1" type="radio" />
-                    <span class="black-text">1. Lorem, ipsum dolor sit amet consectetur adipisicing
-                      elit. Quibusdam, cum. Nam sunt accusantium eveniet sed
-                      ullam sit perspiciatis illum cumque harum saepe,
-                      laboriosam modi quod iure adipisci fuga nihil
-                      neque.</span>
-                  </label>
-                </p>
-              </div>
-              <div>
-                <p>
-                  <label>
-                    <input class="with-gap" name="group1" type="radio" />
-                    <span class="black-text">2. Lorem ipsum dolor sit amet consectetur adipisicing
-                      elit. Dignissimos in fuga quas sed ad hic nobis
-                      veritatis eveniet voluptatem veniam quo ea soluta, iusto
-                      ipsa omnis ratione similique corporis odio sunt
-                      reiciendis? Saepe qui velit, autem consequatur sed
-                      ratione? Libero in error excepturi dolorum numquam natus
-                      saepe similique nisi quae? Facere ipsum cumque expedita
-                      quam animi voluptatum iure autem porro.</span>
-                  </label>
-                </p>
-              </div>
-              <div>
-                <p>
-                  <label>
-                    <input class="with-gap" name="group1" type="radio" />
-                    <span class="black-text">3. Lorem ipsum dolor sit amet consectetur adipisicing
-                      elit. Possimus animi accusamus nisi, sed adipisci
-                      dolorum, vel alias architecto, magni quia obcaecati
-                      corrupti fuga temporibus earum vero dolor veritatis
-                      quaerat commodi! Assumenda suscipit dolorem voluptatum
-                      perferendis reiciendis magni beatae, omnis in!</span>
-                  </label>
-                </p>
-              </div>
-              <div>
-                <p>
-                  <label>
-                    <input class="with-gap" name="group1" type="radio" />
-                    <span class="black-text">4. Lorem ipsum dolor sit amet, consectetur adipisicing
-                      elit. Eum alias expedita rem minus nesciunt, repudiandae
-                      reprehenderit error beatae, blanditiis doloremque et
-                      dolores? Quod doloremque voluptatem sequi iusto libero
-                      maxime earum quae enim nemo soluta porro dolorum,
-                      laborum ullam quos sapiente deleniti in ut cumque ipsum
-                      quam exercitationem! Nisi sit dolores, excepturi nobis
-                      eos dolor quasi saepe quod aperiam rem veniam obcaecati
-                      facere molestias deserunt ab expedita? Placeat
-                      repudiandae sed repellat?</span>
-                  </label>
-                </p>
-              </div>
-              <div>
-                <p>
-                  <label>
-                    <input class="with-gap" name="group1" type="radio" />
-                    <span class="black-text">5. Lorem ipsum dolor sit amet consectetur adipisicing
-                      elit. Eaque, voluptas!</span>
-                  </label>
-                </p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <textarea id="textarea1" class="materialize-textarea"></textarea>
-                <label for="textarea1" style="color: #218240">Justificativa *</label>
-              </div>
-            </div>
-          </div>
-          <p style="color: #218240; font-size: smaller">
-            * Campos Obrigatórios.
-          </p>
-          <div class="row">
-            <div class="col s12 m6 l3">
-              <span class="CorTemaBtnHover2" style="display: block; text-align: start">
-                <a class="btn btn-small waves-light CorTemaBtn" href="" title="Questão Anterior."><i class="material-icons">chevron_left</i></a>
-              </span>
-            </div>
-            <div class="col s12 m6 l6">
-              <p></p>
-            </div>
-            <div class="col s12 m6 l3">
-              <span class="CorTemaBtnHover2" style="display: block; text-align: end">
-                <a class="btn btn-small waves-light CorTemaBtn" href="" title="Próxima Questão."><i class="material-icons">chevron_right</i></a>
-              </span>
-            </div>
-          </div>
-          <!-- </div> -->
-          <!-- </div> -->
-        </form>
-      </div>
-      <div id="test3" class="col s12">
-        <form action="#">
-          <!-- <div class="container"> -->
-          <div class="parentQuestoes">
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest3(numeroQuestao[40].innerText)" href="#">3.1</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest3(numeroQuestao[41].innerText)" href="#">3.2</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest3(numeroQuestao[42].innerText)" href="#">3.3</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest3(numeroQuestao[43].innerText)" href="#">3.4</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest3(numeroQuestao[44].innerText)" href="#">3.5</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest3(numeroQuestao[45].innerText)" href="#">3.6</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest3(numeroQuestao[46].innerText)" href="#">3.7</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest3(numeroQuestao[47].innerText)" href="#">3.8</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest3(numeroQuestao[48].innerText)" href="#">3.9</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest3(numeroQuestao[49].innerText)" href="#">3.10</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest3(numeroQuestao[50].innerText)" href="#">3.11</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest3(numeroQuestao[51].innerText)" href="#">3.12</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest3(numeroQuestao[52].innerText)" href="#">3.13</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest3(numeroQuestao[53].innerText)" href="#">3.14</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest3(numeroQuestao[54].innerText)" href="#">3.15</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest3(numeroQuestao[55].innerText)" href="#">3.16</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest3(numeroQuestao[56].innerText)" href="#">3.17</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest3(numeroQuestao[57].innerText)" href="#">3.18</a>
-          </div>
-          <!-- <div class="card-panel CardTopicos" style="border-radius: 5px;"> -->
-          <p class="black-text">
-            <strong style="color: #218240" id="textoQuest3">3.1</strong>
-            {{questao.enunciado}}
-            <strong style="color: #218240; font-weight: bolder">*</strong>
-          </p>
-          <div class="s12 m4 l8">
-            <div class="recuo10">
-              <div>
-                <p>
-                  <label>
-                    <input class="with-gap" name="group1" type="radio" />
-                    <span class="black-text">0. Não se aplica.</span>
-                  </label>
-                </p>
-              </div>
-              <div>
-                <p>
-                  <label>
-                    <input class="with-gap" name="group1" type="radio" />
-                    <span class="black-text">1. Lorem, ipsum dolor sit amet consectetur adipisicing
-                      elit. Quibusdam, cum. Nam sunt accusantium eveniet sed
-                      ullam sit perspiciatis illum cumque harum saepe,
-                      laboriosam modi quod iure adipisci fuga nihil
-                      neque.</span>
-                  </label>
-                </p>
-              </div>
-              <div>
-                <p>
-                  <label>
-                    <input class="with-gap" name="group1" type="radio" />
-                    <span class="black-text">2. Lorem ipsum dolor sit amet consectetur adipisicing
-                      elit. Dignissimos in fuga quas sed ad hic nobis
-                      veritatis eveniet voluptatem veniam quo ea soluta, iusto
-                      ipsa omnis ratione similique corporis odio sunt
-                      reiciendis? Saepe qui velit, autem consequatur sed
-                      ratione? Libero in error excepturi dolorum numquam natus
-                      saepe similique nisi quae? Facere ipsum cumque expedita
-                      quam animi voluptatum iure autem porro.</span>
-                  </label>
-                </p>
-              </div>
-              <div>
-                <p>
-                  <label>
-                    <input class="with-gap" name="group1" type="radio" />
-                    <span class="black-text">3. Lorem ipsum dolor sit amet consectetur adipisicing
-                      elit. Possimus animi accusamus nisi, sed adipisci
-                      dolorum, vel alias architecto, magni quia obcaecati
-                      corrupti fuga temporibus earum vero dolor veritatis
-                      quaerat commodi! Assumenda suscipit dolorem voluptatum
-                      perferendis reiciendis magni beatae, omnis in!</span>
-                  </label>
-                </p>
-              </div>
-              <div>
-                <p>
-                  <label>
-                    <input class="with-gap" name="group1" type="radio" />
-                    <span class="black-text">4. Lorem ipsum dolor sit amet, consectetur adipisicing
-                      elit. Eum alias expedita rem minus nesciunt, repudiandae
-                      reprehenderit error beatae, blanditiis doloremque et
-                      dolores? Quod doloremque voluptatem sequi iusto libero
-                      maxime earum quae enim nemo soluta porro dolorum,
-                      laborum ullam quos sapiente deleniti in ut cumque ipsum
-                      quam exercitationem! Nisi sit dolores, excepturi nobis
-                      eos dolor quasi saepe quod aperiam rem veniam obcaecati
-                      facere molestias deserunt ab expedita? Placeat
-                      repudiandae sed repellat?</span>
-                  </label>
-                </p>
-              </div>
-              <div>
-                <p>
-                  <label>
-                    <input class="with-gap" name="group1" type="radio" />
-                    <span class="black-text">5. Lorem ipsum dolor sit amet consectetur adipisicing
-                      elit. Eaque, voluptas!</span>
-                  </label>
-                </p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <textarea id="textarea1" class="materialize-textarea"></textarea>
-                <label for="textarea1" style="color: #218240">Justificativa *</label>
-              </div>
-            </div>
-          </div>
-          <p style="color: #218240; font-size: smaller">
-            * Campos Obrigatórios.
-          </p>
-          <div class="row">
-            <div class="col s12 m6 l3">
-              <span class="CorTemaBtnHover2" style="display: block; text-align: start">
-                <a class="btn btn-small waves-light CorTemaBtn" href="" title="Questão Anterior."><i class="material-icons">chevron_left</i></a>
-              </span>
-            </div>
-            <div class="col s12 m6 l6">
-              <p></p>
-            </div>
-            <div class="col s12 m6 l3">
-              <span class="CorTemaBtnHover2" style="display: block; text-align: end">
-                <a class="btn btn-small waves-light CorTemaBtn" href="#" title="Próxima Questão."><i class="material-icons">chevron_right</i></a>
-              </span>
-            </div>
-          </div>
-          <!-- </div> -->
-          <!-- </div> -->
-        </form>
-      </div>
+      </section>
     </div>
   </div>
 
@@ -502,7 +285,7 @@
   <div class="fixed-action-btn" id="btn-anexos" title="Prancheta de Anexos.">
     <a class="btn-floating btn-large green darken-3 modal-trigger" href="#modal1">
       <i class="large material-icons">file_upload</i>
-      <div class="testecss black-text"><span>Anexos</span></div>
+      <div class="black-text"><span>Anexos</span></div>
     </a>
   </div>
 
@@ -537,7 +320,7 @@
           <div class="file-field input-field bot-allign">
             <div class="btn green darken-3">
               <span>Inserir</span>
-              <input id="input-arquivo" type="file"/>
+              <input id="input-arquivo" type="file" />
             </div>
             <div class="file-path-wrapper">
               <input class="file-path validate botao-arquivo" type="text" placeholder="Upload de arquivos" />
