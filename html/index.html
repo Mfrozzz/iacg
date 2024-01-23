@@ -78,9 +78,9 @@
   <div class="container">
     <div class="card-panel CardTopicos" style="border-radius: 5px">
       <!-- NAVEGAÇÃO ENTRE AS QUESTÕES -->
-      <ul class="tabs tabs-fixed-width tab-demo z-depth-1" title="Navegue entre as Questões." style="border-radius: 5px"
+      <ul class="tabs tabs-fixed-width tab-demo z-depth-1 tabs-border" title="Clique para naveguar entre as Questões."
         onclick="showAndDisplay()" id="tabs-parent-list">
-        <li class="tab tab-style-background">
+        <li id="selecionado" class="tab tab-style-background destaqueTab">
           <a href="#test1">1 - Organização Didático-Pedagógica</a>
         </li>
         <li class="tab tab-style-background">
@@ -93,78 +93,78 @@
       <section>
         <div id="test1" class="col s12">
           <div class="parentQuestoes" id="tab-content-visible">
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.1</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.2</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.3</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.4</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.5</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.6</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.7</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.8</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.9</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.10</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.11</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.12</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.13</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.14</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.15</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.16</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.17</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.18</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.19</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.20</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.21</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.22</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.23</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">1.24</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao destaqueBtn" onclick="navQuest(numeroQuestao[0].innerText)" href="#">1.1</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[1].innerText)" href="#">1.2</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[2].innerText)" href="#">1.3</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[3].innerText)" href="#">1.4</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[4].innerText)" href="#">1.5</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[5].innerText)" href="#">1.6</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[6].innerText)" href="#">1.7</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[7].innerText)" href="#">1.8</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[8].innerText)" href="#">1.9</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[9].innerText)" href="#">1.10</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[10].innerText)" href="#">1.11</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[11].innerText)" href="#">1.12</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[12].innerText)" href="#">1.13</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[13].innerText)" href="#">1.14</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[14].innerText)" href="#">1.15</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[15].innerText)" href="#">1.16</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[16].innerText)" href="#">1.17</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[17].innerText)" href="#">1.18</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[18].innerText)" href="#">1.19</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[19].innerText)" href="#">1.20</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[20].innerText)" href="#">1.21</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[21].innerText)" href="#">1.22</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[22].innerText)" href="#">1.23</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[23].innerText)" href="#">1.24</a>
           </div>
         </div>
         <div id="test2" class="col s12">
           <div class="parentQuestoes" id="tab-content-visible">
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">2.1</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">2.2</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">2.3</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">2.4</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">2.5</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">2.6</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">2.7</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">2.8</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">2.9</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">2.10</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">2.11</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">2.12</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">2.13</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">2.14</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">2.15</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">2.16</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[24].innerText)" href="#">2.1</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[25].innerText)" href="#">2.2</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[26].innerText)" href="#">2.3</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[27].innerText)" href="#">2.4</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[28].innerText)" href="#">2.5</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[29].innerText)" href="#">2.6</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[30].innerText)" href="#">2.7</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[31].innerText)" href="#">2.8</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[32].innerText)" href="#">2.9</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[33].innerText)" href="#">2.10</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[34].innerText)" href="#">2.11</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[35].innerText)" href="#">2.12</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[36].innerText)" href="#">2.13</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[37].innerText)" href="#">2.14</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[38].innerText)" href="#">2.15</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[39].innerText)" href="#">2.16</a>
           </div>
         </div>
         <div id="test3" class="col s12">
           <div class="parentQuestoes" id="tab-content-visible">
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">3.1</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">3.2</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">3.3</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">3.4</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">3.5</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">3.6</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">3.7</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">3.8</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">3.9</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">3.10</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">3.11</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">3.12</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">3.13</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">3.14</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">3.15</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">3.16</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">3.17</a>
-            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" href="#">3.18</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[40].innerText)" href="#">3.1</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[41].innerText)" href="#">3.2</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[42].innerText)" href="#">3.3</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[43].innerText)" href="#">3.4</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[44].innerText)" href="#">3.5</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[45].innerText)" href="#">3.6</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[46].innerText)" href="#">3.7</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[47].innerText)" href="#">3.8</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[48].innerText)" href="#">3.9</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[49].innerText)" href="#">3.10</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[50].innerText)" href="#">3.11</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[51].innerText)" href="#">3.12</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[52].innerText)" href="#">3.13</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[53].innerText)" href="#">3.14</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[54].innerText)" href="#">3.15</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[55].innerText)" href="#">3.16</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[56].innerText)" href="#">3.17</a>
+            <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[57].innerText)" href="#">3.18</a>
           </div>
         </div>
         <!-- FORMULÁRIO DA QUESTÃO -->
         <form id="questionario" class="questionario" action="#">
           <p class="black-text">
-            <strong style="color: #218240" id="textoQuest3">num.num</strong>
+            <strong style="color: #218240" id="textoQuest">1.1</strong>
             {{questao.enunciado}}
             <strong style="color: #218240; font-weight: bolder">*</strong>
           </p>

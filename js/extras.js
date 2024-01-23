@@ -61,9 +61,14 @@ input.addEventListener("change", function () {
 var tab_content = document.querySelectorAll("#tab-content-visible");
 var indicador = document.getElementsByClassName("indicator");
 var ativar = document.getElementsByClassName("active");
+var tab_class = document.getElementsByClassName("destaqueTab");
 function showAndDisplay(){
     for(let i = 0;i<tab_content.length;i++){
-      tab_content[i].style.display = "flex";
+      if(tab_content[i].style.display == "flex"){
+        tab_content[i].style.display = "none"
+      }else{
+        tab_content[i].style.display = "flex";
+      }
     }
     for(let i =0;i<indicador.length;i++){
       indicador[i].style.display = "block";
@@ -73,20 +78,35 @@ function showAndDisplay(){
     }
 }
 
-// ----- TROCA número QUESTÕES ----- //
-// var numeroQuestao = document.getElementsByClassName("itemQuestao");
-// // console.log(numeroQuestao[0].innerText);
-
-// function navQuest1(e){
-//   document.getElementById("textoQuest").innerHTML = e;
-// }
-
-// function navQuest2(e){
-//   document.getElementById("textoQuest2").innerHTML = e;
-// }
-
-// function navQuest3(e){
-//   document.getElementById("textoQuest3").innerHTML = e;
-// }
-
-// 
+// ----- TROCA número QUESTÕES e seus estilos----- //
+var numeroQuestao = document.getElementsByClassName("itemQuestao");
+var dimensaoQuestao = document.getElementsByClassName("tab-style-background");
+// console.log(numeroQuestao[0].innerText);
+function navQuest(e){
+  // string to int, separa as partes inteira e flutuante para usar na navegação;
+  var splitted = e.split('.');
+  var inteiro = parseInt(splitted[0]);
+  var decimal = parseInt(splitted[1] || 0);
+  decimal = decimal-1;
+  dimensaoQuestao[0].classList.remove("destaqueTab");
+  dimensaoQuestao[1].classList.remove("destaqueTab");
+  dimensaoQuestao[2].classList.remove("destaqueTab");
+  // estilos do botão da questão atual e tab dessa questão
+  for(let i=0;i<numeroQuestao.length;i++){
+    numeroQuestao[i].classList.remove("destaqueBtn");
+    if(inteiro == 1){
+      numeroQuestao[decimal].classList.add("destaqueBtn");
+      dimensaoQuestao[0].classList.add("destaqueTab");
+    }
+    if(inteiro == 2){
+      numeroQuestao[decimal+24].classList.add("destaqueBtn");
+      dimensaoQuestao[1].classList.add("destaqueTab");
+    }
+    if(inteiro == 3){
+      dimensaoQuestao[2].classList.add("destaqueTab");
+      numeroQuestao[decimal+40].classList.add("destaqueBtn");
+    }
+  }
+  // string do numero da questão alterado
+  document.getElementById("textoQuest").innerHTML = e;
+}

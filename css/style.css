@@ -319,14 +319,16 @@ tbody td:hover:before {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-  background: hsla(215, 44%, 54%, 1);
-  background: linear-gradient(270deg, hsla(215, 44%, 54%, 0.9) 0%, hsla(0, 0%, 100%, 1) 100%);
+  background: hsla(215, 44%, 54%, 0.5);
+  /* background: linear-gradient(270deg, hsla(215, 44%, 54%, 0.9) 0%, hsla(0, 0%, 100%, 1) 100%);
   background: -moz-linear-gradient(270deg, hsla(215, 44%, 54%, 0.9) 0%, hsla(0, 0%, 100%, 1) 100%);
   background: -webkit-linear-gradient(270deg, hsla(215, 44%, 54%, 0.5) 0%, hsla(0, 0%, 100%, 0.5) 100%);
-  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#5782BE", endColorstr="#FFFFFF", GradientType=1);
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#5782BE", endColorstr="#FFFFFF", GradientType=1); */
   padding: 1%;
   padding-bottom: 1.15%;
-  border-radius: 5px;
+  border: 1px solid #1d3557;
+  border-radius: 0 0 5px 5px;
+  border-top: none;
 }
 
 .questBtns {
@@ -342,8 +344,26 @@ tbody td:hover:before {
   color: white;
 }
 
+.questBtns:focus{
+  color: #1d3557;
+  border: 1px solid #1d3557;
+  background-color: #FFF;
+}
+
 #tab-content-visible, .indicator{
   display: none;
+}
+
+.destaqueBtn{
+  color: #1d3557;
+  border: 1px solid #1d3557;
+  background-color: #FFF;
+}
+
+.destaqueTab{
+  /* font-style:italic; */
+  font-weight: bolder;
+  text-decoration: underline;
 }
 
 /* PRANCHETA ADICIONAIS */
@@ -428,9 +448,9 @@ tbody td:hover:before {
 
 .tab-style-background {
   background: hsla(215, 44%, 54%, 1);
-  background: linear-gradient(265deg, hsla(215, 44%, 54%, 0.9) 0%, hsla(0, 0%, 100%, 1) 100%);
-  background: -moz-linear-gradient(265deg, hsla(215, 44%, 54%, 0.9) 0%, hsla(0, 0%, 100%, 1) 100%);
-  background: -webkit-linear-gradient(265deg, hsla(215, 44%, 54%, 0.5) 0%, hsla(0, 0%, 100%, 0.5) 100%);
+  background: linear-gradient(89deg, hsla(215, 44%, 54%, 0.9) 0%, hsla(0, 0%, 100%, 1) 100%);
+  background: -moz-linear-gradient(89deg, hsla(215, 44%, 54%, 0.9) 0%, hsla(0, 0%, 100%, 1) 100%);
+  background: -webkit-linear-gradient(89deg, hsla(215, 44%, 54%, 0.5) 0%, hsla(0, 0%, 100%, 0.5) 100%);
   filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#5782BE", endColorstr="#FFFFFF", GradientType=1);
 }
 
@@ -439,6 +459,10 @@ tbody td:hover:before {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.tabs-border{
+  border-radius: 5px 5px 0 0;
 }
 
 /* SOBRESCRITO */
@@ -489,12 +513,6 @@ tbody td:hover:before {
   height: 2px;
   background-color: #263968;
   will-change: left, right;
-}
-
-.tabs .tab a:hover,
-.tabs .tab a.active {
-  background-color: transparent;
-  color: #263968;
 }
 
 .tabs .tab a:hover,
