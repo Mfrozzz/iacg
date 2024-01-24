@@ -366,6 +366,12 @@ tbody td:hover:before {
   text-decoration: underline;
 }
 
+.questRespondida{
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: #218240;
+}
+
 /* PRANCHETA ADICIONAIS */
 
 .fixed-action-btn-prancheta {
@@ -466,6 +472,10 @@ tbody td:hover:before {
 }
 
 /* SOBRESCRITO */
+
+.green.darken-3 {
+  background-color: #2E7D32 !important;
+}
 
 .tabs .indicator {
   position: absolute;

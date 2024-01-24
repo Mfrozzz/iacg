@@ -80,19 +80,20 @@
       <!-- NAVEGAÇÃO ENTRE AS QUESTÕES -->
       <ul class="tabs tabs-fixed-width tab-demo z-depth-1 tabs-border" title="Clique para naveguar entre as Questões."
         onclick="showAndDisplay()" id="tabs-parent-list">
-        <li id="selecionado" class="tab tab-style-background destaqueTab">
-          <a href="#test1">1 - Organização Didático-Pedagógica</a>
+        <li class="tab tab-style-background destaqueTab">
+          <a id="tab1" href="#test1">1 - Organização Didático-Pedagógica</a>
         </li>
         <li class="tab tab-style-background">
-          <a href="#test2">2 - Corpo Docente e Tutorial</a>
+          <a id="tab2" href="#test2">2 - Corpo Docente e Tutorial</a>
         </li>
         <li class="tab tab-style-background">
-          <a href="#test3">3 - Infraestrutura</a>
+          <a id="tab3" href="#test3">3 - Infraestrutura</a>
         </li>
       </ul>
       <section>
         <div id="test1" class="col s12">
           <div class="parentQuestoes" id="tab-content-visible">
+            <!-- Para questão atual -> class="destaqueBtn" || Para questão respondida class="questRespondida" -->
             <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao destaqueBtn" onclick="navQuest(numeroQuestao[0].innerText)" href="#">1.1</a>
             <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[1].innerText)" href="#">1.2</a>
             <a class="waves-effect waves-light btn-small questBtns col s1 itemQuestao" onclick="navQuest(numeroQuestao[2].innerText)" href="#">1.3</a>
