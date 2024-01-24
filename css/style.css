@@ -350,7 +350,7 @@ tbody td:hover:before {
   background-color: #FFF;
 }
 
-#tab-content-visible, .indicator{
+#tab-content, .indicator{
   display: none;
 }
 
@@ -370,6 +370,10 @@ tbody td:hover:before {
   color: #fff;
   border: 1px solid #fff;
   background-color: #218240;
+}
+
+#tab-content.aberto {
+  display: block;
 }
 
 /* PRANCHETA ADICIONAIS */

@@ -58,66 +58,90 @@ input.addEventListener("change", function () {
 });
 
 // ----- VISIBILIDADE DAS QUESTÕES ----- //
-var tab_content = document.querySelectorAll("#tab-content-visible");
+var tab_content = document.querySelector("#tab-content");
 var indicador = document.getElementsByClassName("indicator");
-var ativar = document.getElementsByClassName("active");
-// var tab_class = document.getElementsByClassName("destaqueTab");
-var tab1 = false;
-var tab2 = false;
-var tab3 = false;
-function showAndDisplay() {
-  tab1 = false;
-  tab2 = false;
-  tab3 = false;
-  for (let i = 0; i < tab_content.length; i++) {
-    if (tab_content[i].style.display == "flex") {
-      tab_content[i].style.display = "none";
-    }else{
-      tab_content[i].style.display = "flex";
+
+document.querySelectorAll("#tabs-parent-list > li").forEach(tab => {
+  tab.addEventListener("click", (e) => {
+    tab_content.classList.toggle("aberto");
+    console.log(this.querySelector("a").classList)
+    //event.target
+    // if(tab_content.style.display == "block"){
+    //   tab_content.style.display = "none";
+    // }else{
+    //   tab_content.style.display = "block";
+    // }
+
+    for (let i = 0; i < indicador.length; i++) {
+      indicador[i].style.display = "block";
     }
-  }
-  //   if (tab_content[i].style.display == "flex") {
-  //     if ($("#tab1").hasClass("active")) {
-  //       tab1 = true;
-  //     }
-  //     if ($("#tab2").hasClass("active")) {
-  //       tab2 = true;
-  //     }
-  //     if ($("#tab3").hasClass("active")) {
-  //       tab3 = true;
-  //     }
-  //   } else {
-  //     tab_content[i].style.display = "flex";
-  //     tab1 = false;
-  //     tab2 = false;
-  //     tab3 = false;
-  //   }
-  // }
-  // console.log(tab1 + " tab1");
-  // console.log(tab2 + " tab2");
-  // console.log(tab3 + " tab3");
-  // if ((tab1 && !tab2 && !tab3) && (tab_content[0].style.display == "flex")) {
-  //   tab_content[0].style.display = "none";
-  //   tab1 = false;
-  // }
-  // if ((tab2 && !tab1 && !tab3) && (tab_content[1].style.display == "flex")) {
-  //   tab_content[1].style.display = "none";
-  //   tab2 = false;
-  // }
-  // if ((tab3 && !tab1 && !tab2) && (tab_content[2].style.display == "flex")) {
-  //   tab3 = false;
-  //   tab_content[2].style.display = "none";
-  // }
-  // for (let i = 0; i < indicador.length; i++) {
-  //   indicador[i].style.display = "block";
-  // }
-  // for (let i = 0; i < ativar.length; i++) {
-  //   ativar[i].style.display = "block";
-  // }
-  // console.log(tab1 + " tab1");
-  // console.log(tab2 + " tab2");//talvez jogar pra cá
-  // console.log(tab3 + " tab3");
-}
+
+  });
+});
+// var tab1 = document.getElementById("tab1");
+// var tab2 = document.getElementById("tab2");
+// var tab3 = document.getElementById("tab3");
+// var ativo = [false,false,false];
+
+// function showAndDisplay() {
+//   // tab1.onclick = function(){
+//   //   if(tab_content[0].style.display === "flex" && ativo[0]){
+//   //     tab_content[0].style.display = "none";
+//   //     ativo[0] = false;
+//   //     ativo[1] = true;
+//   //     ativo[2] = true;
+//   //   }else{
+//   //     tab_content[0].style.display = "flex";
+//   //     ativo[0] = true;
+//   //     ativo[1] = false;
+//   //     ativo[2] = false;
+//   //   }
+//   // };
+//   // tab2.onclick = function(){
+//   //   if(tab_content[1].style.display === "flex" && ativo[1]){
+//   //     tab_content[1].style.display = "none";
+//   //     ativo[0] = true;
+//   //     ativo[1] = false;
+//   //     ativo[2] = true;
+//   //   }else{
+//   //     tab_content[1].style.display = "flex";
+//   //     ativo[0] = false;
+//   //     ativo[1] = true;
+//   //     ativo[2] = false;
+//   //   }
+//   // };
+//   // tab3.onclick = function(){
+//   //   if(tab_content[2].style.display === "flex" && ativo[2]){
+//   //     tab_content[2].style.display = "none";
+//   //     ativo[0] = true;
+//   //     ativo[1] = true;
+//   //     ativo[2] = false;
+//   //   }else{
+//   //     tab_content[2].style.display = "flex";
+//   //     ativo[0] = false;
+//   //     ativo[1] = false;
+//   //     ativo[2] = true;
+//   //   }
+//   // };
+//   // for (let i = 0; i < tab_content.length; i++) {
+//   //   if (tab_content[i].style.display == "flex") {
+//   //     tab_content[i].style.display = "none";
+//   //   }else{
+//   //     tab_content[i].style.display = "flex";
+//   //   }
+//   // }
+
+//   tab_content.forEach(e => {
+
+//     // if(e.style.display == "flex"){
+//     //   e.style.display = "none";
+//     // }else{
+//     //   e.style.display = "flex";
+//     // }
+//   });
+
+
+// }
 
 // ----- TROCA número QUESTÕES e seus estilos----- //
 var numeroQuestao = document.getElementsByClassName("itemQuestao");
