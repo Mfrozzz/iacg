@@ -6,6 +6,7 @@
 
 > Marcos Vinicius Schimaichel Boava
 >> mboava@unicentro.br
+>>> Estágio Supervisionado DECOMP UNICENTRO
 
 ## Capturas de tela do projeto
 
